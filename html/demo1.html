@@ -4,10 +4,12 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="../dist/style/demo20/index.css">
+	<script src="http://libs.baidu.com/jquery/1.6.4/jquery.min.js"></script>
 </head>
 <body>
 <div class="wrap">
-	<div class="device-box clearfix">
+	<div class="btn" id="follow">+关注</div>
+	<!-- <div class="device-box clearfix">
 		<div class="video">
 			<p>请选择视频设备</p>
 			<select name="" id="">
@@ -24,9 +26,16 @@
 		</div>
 		<p class="tip">建议使用‘高清直播’巴拉巴拉</p> 
 		<a href="javascript:void(0)" class="preview-btn">点击预览</a><a href="javascript:void(0)" class="begin-btn">开始直播</a>
-	</div>
+	</div> -->
+	<div class="dlg"></div>
 </div>
-	
+	<script>
+		$(function(){
+			$('#follow').click(function(){
+				$('.dlg').addClass('animate');
+			})
+		});
+	</script>
 </body>
 </html>
 <!-- 997600 l123456 -->

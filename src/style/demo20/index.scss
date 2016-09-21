@@ -12,7 +12,7 @@
 	background:url(../../image/demo20/live.jpg) no-repeat;
 	color:#fff;
 }
-.device-box{
+/* .device-box{
 	position: absolute;
 	top:50%;
 	left:50%;
@@ -75,4 +75,98 @@
 	.preview-btn{
 		margin-right:20px;
 	}
+} */
+.wrap{
+	overflow: hidden;
+	position: relative;
+	.btn{
+		width: 53px;
+		height: 24px;
+		margin: 15px 35px;;
+		line-height: 24px;
+		background: #eb3d77;
+		color: #FFF;
+		text-align: center;
+		cursor: pointer;
+		border-radius: 15px;
+		font-size: 12px;
+	}
+	.dlg{
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -110px 0px 0px -190px;
+		width:378px;
+		height: 222px;
+		background: url(../../image/demo20/11.png) no-repeat;
+	}
+	.animate{
+		display:block;
+		animation-name: bounceInDown;
+		animation-duration: .9s;
+		animation-fill-mode: both;
+	}
+
 }
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+} 
+
+/* @include keyframes(bounceInDown) {
+  from, 60%, 75%, 90%, to {
+    @include animation-timing-function(cubic-bezier(0.215, 0.610, 0.355, 1.000));
+  }
+
+  0% {
+    opacity: 0;
+    @include transform(translate3d(0, -3000px, 0));
+  }
+
+  60% {
+    opacity: 1;
+    @include transform(translate3d(0, 25px, 0));
+  }
+
+  75% {
+    @include transform(translate3d(0, -10px, 0));
+  }
+
+  90% {
+    @include transform(translate3d(0, 5px, 0));
+  }
+
+  to {
+    @include transform(none);
+  }
+} */

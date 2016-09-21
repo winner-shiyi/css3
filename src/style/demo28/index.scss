@@ -7,6 +7,7 @@
 // file:///D:/fancy-icon/index.html
 
 
+:root .container li{ filter: none; } 
 .container{ 
 	width: 1000px;
     padding-top: 50px;
@@ -20,6 +21,9 @@
     	height: 100px;
     	margin-bottom: 10px;
     	text-align: center;
+        background:rgba(34,139,34,.76);
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#C1228B22,endColorstr=C1228B22)"; /*Filter for IE8 */ 
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#C1228B22, endColorstr=#C1228B22); /*Filter for older IEs */
     	span{
     		display: block;
     	}
