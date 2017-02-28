@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css的div垂直居中的方法</title>
+	<link rel="stylesheet" href="../dist/style/demo29/index.css">
+</head>
+<body>
+	<div class="block" style="height:100px;">
+	    <div class="centered">
+	        <h1>haorooms案例题目</h1>
+	        <p>haorooms案例内容，haorooms案例内容haorooms案例内容haorooms案例内容haorooms案例内容haorooms案例内容haorooms案例内容haorooms案例内容haorooms案例内容</p>
+	    </div>
+
+	</div>
+	<div class="block2" style="height:100px;">
+	    <div class="center">
+	       Unknown stuff to be centered22.
+	    </div>
+	</div>
+	<div class="block3" style="height:100px;">
+	    <div class="center">
+	       Unknown stuff to be centered33.
+	    </div>
+	</div>
+	<div class="block4" style="height:100px;">
+	    <div class="center">
+	       Unknown stuff to be centered44.
+	    </div>
+	</div>
+	<div class="outer">
+	    <div class="inner">haorooms内部内容</div><div class="v">cssHack</div>
+	</div>
+
+	<script>
+		$('.xxx').click(function(){
+			if($(this).is(':checked')){
+				$(this).parent('td').find('.xxx').attr('checked',false);
+			}
+		})
+	</script>
+</body>
+</html>
