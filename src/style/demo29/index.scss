@@ -1,0 +1,87 @@
+@charset "utf-8";
+@import "common";
+@import "compass/css3";
+//图片路径：../../image/demo15/border_round.png
+
+//方法二：
+/* This parent can be any width and height */
+.block {
+  text-align: center;
+  background-color: #f1dcdc;
+}
+
+/* The ghost, nudged to maintain perfect centering */
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+/* The element to be centered, can
+   also be of any width and height */ 
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+}
+//方法三：
+.block2 {
+   display: table;
+   width: 100%;
+   background:#f3aaaa;
+   .center{
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+   }
+}
+
+//方法四：
+.block3{
+	background: #ed7070;
+	justify-content:center;//子元素水平居中
+	align-items:center;//子元素垂直居中
+	display:-webkit-flex;
+}
+.block4{
+	position: relative;
+	background: #c64f4f;
+	.center {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  width:50%;//这里的宽高百分比，是相对父元素 
+	  height: 50%;
+	  background-color: #636060;
+	  @include transform(translateX(-50%) translateY(-50%));//这里的位移百分比是 相对自身
+	}
+}
+//方法五：这种方法是 不管html里面的内容有多了，换行了，仍然可以居中显示
+//如果直接 把inner的line-height设为和父元素等高的话，当inner只有一行的时候 是可以实现垂直居中
+.outer {
+    background-color: #ccc;
+    font-size: 24px;
+    height: 350px;
+    text-align: center;
+    overflow: hidden;
+    width: 280px;
+}
+.outer  .inner,
+.outer  .v {
+    display: inline-block;
+    zoom: 1;
+    *display: inline; /* 用于触发支持IE67 inline-block */
+}
+.outer  .inner {            
+    line-height: 30px;
+    padding: 0 4px 0 5px;
+    vertical-align: middle;
+    width: 262px;           
+}
+.outer  .v {
+    line-height: 350px;
+    text-indent:-9999px;
+    width: 1px;         
+}

@@ -1,0 +1,36 @@
+@charset "utf-8";
+@import "common";
+
+
+.box{
+	width:600px;
+	height:200px;
+	outline:1px solid red;
+	margin:100px auto;
+	overflow:hidden;
+}
+.item {
+	float:left;
+	width:200px;
+	height:200px;
+    animation: ani 6s infinite linear both;
+    @for $i from 1 to 4 {
+      &:nth-child(#{$i}) {
+        animation-delay: (-1+$i)*2s;
+      }
+    }
+}
+.item1{
+	background:linear-gradient(transparent,green);
+}
+.item2{
+	background:linear-gradient(transparent,red);
+}
+.item3{
+	background:linear-gradient(transparent,yellow);
+}
+
+@keyframes ani {
+  0%, 33.33% {opacity: 1; visibility: visible;}
+  33.34%, 100% {opacity: 0; visibility: hidden;}
+}
